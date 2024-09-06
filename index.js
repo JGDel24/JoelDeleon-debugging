@@ -46,8 +46,10 @@ function checkGuess() {
   if (guess !== targetNumber) {
     if (guess < targetNumber) {
       tooLowMessage.style.display = '';
+      console.log(tooLowMessage);
     } else {
       tooHighMessage.style.display = '';
+      console.log(tooHighMessage);
     }
 
     const remainingAttempts = maxNumberOfAttempts - attempts;
@@ -80,12 +82,12 @@ function hideAllMessages() {
 function setup() {
   // Get random number
    targetNumber = getRandomNumber(1, 100);
-  // console.log(`target number: ${targetNumber}`);
+  console.log(`target number: ${targetNumber}`);
 
   
   // Reset number of attempts
   maxNumberOfAttempts = 0;
-  // console.log(`number of attempts ${maxNumberOfAttempts}`);
+  console.log(`number of attempts ${maxNumberOfAttempts}`);
   
 
   // Enable the input and submit button
